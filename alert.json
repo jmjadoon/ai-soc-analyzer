@@ -1,0 +1,29 @@
+{
+  "timestamp": "Aug 12, 2026 @ 18:50:35.294",
+  "agent": {
+    "id": "000",
+    "name": "wazuh-server"
+  },
+  "manager": {
+    "name": "wazuh-server"
+  },
+  "rule": {
+    "id": "80730",
+    "level": 3,
+    "firedtimes": 1,
+    "description": "Auditd: SELinux permission check.",
+    "groups": [
+      "audit",
+      "audit_selinux"
+    ]
+  },
+  "audit": {
+    "pid": 17255,
+    "id": 485,
+    "type": "AVC",
+    "command": "passwd"
+  },
+  "location": "/var/log/audit/audit.log",
+  "decoder": "auditd",
+  "full_log": "type=AVC msg=audit(1786542633.649:485): avc: denied { write } for pid=17255 comm=\"passwd\" path=\"/var/ossec/queue/vd_updater/tmp/contents/3733504-api_file.json\" dev=\"sda1\" ino=100664818 scontext=system_u:system_r:passwd_t:s0 tcontext=system_u:object_r:tmp_t:s0 tclass=file permissive=1"
+}

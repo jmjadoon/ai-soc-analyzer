@@ -1,0 +1,2 @@
+# No external Python packages required.
+# Uses Python standard library and a local Ollama installation.
