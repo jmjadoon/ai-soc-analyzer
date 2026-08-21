@@ -1,0 +1,52 @@
+# AI-SOC-Analyzer Requirements
+# =============================================================================
+# This project uses only Python's standard library (urllib).
+# External dependencies are minimal—only Ollama (system service) is required.
+# =============================================================================
+
+# SYSTEM REQUIREMENTS (Not pip-installable)
+# =============================================================================
+
+# 1. OLLAMA (Local LLM Runtime)
+#    Download: https://ollama.ai/download
+#    Platform Support: macOS, Linux, Windows
+#
+#    After installation, pull the Gemma 3 1B model:
+#    $ ollama pull gemma:3b
+#
+#    Start the service before running the analyzer:
+#    $ ollama serve
+#
+#    (Keep this running in a separate terminal)
+
+# 2. PYTHON 3.8+
+#    This project uses only the Python standard library:
+#    - json (alert parsing)
+#    - urllib (Ollama API communication)
+#    - os (file operations)
+#    - sys (error handling)
+#    - datetime (report timestamps)
+#
+#    No pip packages required. This minimizes dependencies and deployment complexity.
+
+# PYTHON VERSION
+# =============================================================================
+python>=3.8
+
+# OPTIONAL: Development & Testing
+# =============================================================================
+# Uncomment if you want to extend the project:
+
+# pytest>=7.0          # For unit testing
+# black>=22.0          # Code formatting
+# pylint>=2.0          # Linting
+# mypy>=0.900          # Type checking
+
+# INTEGRATION EXAMPLES (For Future Enhancement)
+# =============================================================================
+# These are NOT required for basic functionality but useful for expanding features:
+
+# requests>=2.28       # Alternative to urllib (simpler API)
+# splunk-sdk>=1.7      # Splunk SIEM integration
+# elastic>=8.0         # Elasticsearch/ELK integration
+# pydantic>=1.9        # Data validation for structured output
